@@ -14,31 +14,55 @@
             margin: 10px;
             cursor: pointer;
         }
-        .main-image{
-            width:300px;
-           height: 300px;
+        #main-image{
+            width:400px;
+           height: 400px;
            object-fit:cover;
            border: 1px solid black;
-           border-radius:0px;
+           border-radius:30px;
            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
            margin: 40px auto;
            display: block;
         }
-        .image-container{
-            display: block;
-            margin: 20px 50%;
+        .images-container{
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
-    <img src="1.jpg" class="main-image">
+    <img src="1.jpg" id="main-image">
     <div class="images-container" >
         <img src="1.jpg" class="product-image" onclick="changeImage(1)">
-        <img src="2.jpg" class="product-image" onclick="changeImage(1)">
-        <img src="3.jpg" class="product-image" onclick="changeImage(1)">
-        <img src="4.jpg" class="product-image" onclick="changeImage(1)">
-        <img src="5.jpg" class="product-image" onclick="changeImage(1)">
-        <img src="6.jpg" class="product-image" onclick="changeImage(1)">
+        <img src="2.jpg" class="product-image" onclick="changeImage(2)">
+        <img src="3.jpg" class="product-image" onclick="changeImage(3)">
+        <img src="4.jpg" class="product-image" onclick="changeImage(4)">
+        <img src="5.jpg" class="product-image" onclick="changeImage(5)">
+        <img src="6.jpg" class="product-image" onclick="changeImage(6)">
     </div>
+
+    <script>
+        function changeImage(num){
+            const mainImage = document.getElementById("main-image");
+            if(num==1){
+                mainImage.src = "1.jpg";
+            }
+            else if(num==2){
+                mainImage.src = "2.jpg";
+            }
+            else if(num==3){
+                mainImage.src = "3.jpg";
+            }
+            else if(num==4){
+                mainImage.src = "4.jpg";
+            }
+            else if(num==5){
+                mainImage.src = "5.jpg";
+            }
+            else if(num==6){
+                mainImage.src = "6.jpg";
+            }
+    }
+    </script>
 </body>
 </html>
